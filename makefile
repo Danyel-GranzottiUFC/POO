@@ -8,7 +8,7 @@ OUTPUT_FILE_NAME = main_out.out
 #----------------------------------------------------------------#
 run:
 	@$(COMPILER) $(MAIN_FILE) $(OUTPUT_OPTION) $(OUTPUT_FILE_NAME)
-	./$(OUTPUT_FILE_NAME)
+	@./$(OUTPUT_FILE_NAME)
 cls:
 	@rm $(OUTPUT_FILE_NAME)
 	@clear

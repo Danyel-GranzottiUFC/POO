@@ -1,6 +1,7 @@
 #ifndef CD_H
 #define CD_H
 using namespace std;
+
 #include <deque>
 
 class CD{

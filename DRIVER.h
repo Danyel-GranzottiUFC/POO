@@ -16,11 +16,12 @@ MIDIA *ArtistME = new MIDIA ("Metallica", "...And Justice For All", 1988, "Rock"
 MIDIA *ArtistIM = new MIDIA ("Iron Mainden", "Piece Of Mind", 1983, "Rock");
 MIDIA *ArtistNI = new MIDIA ("Nirvana", "Nevermind", 1991, "Rock");
 */
+
 /* Inicio das funções */
 
 /* Função A */
 /* Dado o nome de um artista, exibir todos os CD's de sua autoria ordenados pela data de lançamento */
 void showAllCds (){
-
+    std::cout << "Hello" << std::endl;
 };
 #endif

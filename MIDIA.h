@@ -1,11 +1,17 @@
 #ifndef MIDIA_H
 #define MIDIA_H
 
+/* Headers */
+#include "CD.h"
+#include "DVD.h"
+
+/* Bibliotecas */
 #include <iostream>
-#include <deque>
 #include <string>
-//#include "./CD.h"
-//#include "./DVD.h"
+#include <deque>
+#include <iterator>
+
+using namespace std;
 
 class MIDIA
 {
@@ -18,10 +24,6 @@ private:
    deque<string *> keywords;
 
 public:
-   // deque<string *> faixas, int lancamento,string genero, deque<string *> keywords
-   MIDIA(string, string);
-   ~MIDIA();
-
    string getArtista();
    void setArtista(string);
 
@@ -44,59 +46,46 @@ public:
    void printAllMedia(int year);
 };
 
-MIDIA(string nomeArstita, string tituloMidia){
-   artista = nomeArstita;
-   titulo = titu;
-}
-
-string MIDIA::getArtista()
-{
+string MIDIA::getArtista(){
    return (this->artista);
-}
-void MIDIA::setArtista(string name)
-{
+};
+void MIDIA::setArtista(string name){
    this->artista = name;
-}
+};
 
-string MIDIA::getTitulo()
-{
+string MIDIA::getTitulo(){
    return (this->titulo);
-}
-void MIDIA::setTitulo(string name)
-{
+};
+void MIDIA::setTitulo(string name){
    this->titulo = name;
-}
+};
 
 deque<string *> MIDIA::getFaixa(){
    return (this->faixas);
-}
+};
 void MIDIA::setFaixa(deque<string *> name){
    this->faixas = name;
-}
+};
 
-int MIDIA::getLancamento()
-{
+int MIDIA::getLancamento(){
    return (this->lancamento);
-}
-void MIDIA::setLancamento(int n)
-{
+};
+void MIDIA::setLancamento(int n){
    this->lancamento = n;
-}
+};
 
-string MIDIA::getGenero()
-{
+string MIDIA::getGenero(){
    return (this->genero);
-}
-void MIDIA::setGenero(string name)
-{
+};
+void MIDIA::setGenero(string name){
    this->genero=name;
-}
+};
 
 deque<string *> MIDIA::getKeywords(){
    return (this->keywords);
-}
+};
 void MIDIA::setKeywords(deque<string *>kw){
    this->keywords = kw;
-}
+};
 
 #endif

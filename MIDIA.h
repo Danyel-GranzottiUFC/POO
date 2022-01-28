@@ -24,6 +24,9 @@ private:
    deque<string *> keywords;
 
 public:
+   MIDIA(string, string, int, string);
+   ~MIDIA();
+
    string getArtista();
    void setArtista(string);
 
@@ -46,45 +49,66 @@ public:
    void printAllMedia(int year);
 };
 
-string MIDIA::getArtista(){
+// Construtor padrão
+MIDIA::MIDIA(string nomeArtista, string nomeTitulo, int lanc, string gen)
+{
+   artista = nomeArtista;
+   titulo = nomeTitulo;
+   lancamento = lanc;
+   genero = gen;
+}
+
+string MIDIA::getArtista()
+{
    return (this->artista);
 };
-void MIDIA::setArtista(string name){
+void MIDIA::setArtista(string name)
+{
    this->artista = name;
 };
 
-string MIDIA::getTitulo(){
+string MIDIA::getTitulo()
+{
    return (this->titulo);
 };
-void MIDIA::setTitulo(string name){
+void MIDIA::setTitulo(string name)
+{
    this->titulo = name;
 };
 
-deque<string *> MIDIA::getFaixa(){
+deque<string *> MIDIA::getFaixa()
+{
    return (this->faixas);
 };
-void MIDIA::setFaixa(deque<string *> name){
+void MIDIA::setFaixa(deque<string *> name)
+{
    this->faixas = name;
 };
 
-int MIDIA::getLancamento(){
+int MIDIA::getLancamento()
+{
    return (this->lancamento);
 };
-void MIDIA::setLancamento(int n){
+void MIDIA::setLancamento(int n)
+{
    this->lancamento = n;
 };
 
-string MIDIA::getGenero(){
+string MIDIA::getGenero()
+{
    return (this->genero);
 };
-void MIDIA::setGenero(string name){
-   this->genero=name;
+void MIDIA::setGenero(string name)
+{
+   this->genero = name;
 };
 
-deque<string *> MIDIA::getKeywords(){
+deque<string *> MIDIA::getKeywords()
+{
    return (this->keywords);
 };
-void MIDIA::setKeywords(deque<string *>kw){
+void MIDIA::setKeywords(deque<string *> kw)
+{
    this->keywords = kw;
 };
 

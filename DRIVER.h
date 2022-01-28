@@ -10,6 +10,12 @@
 #include <deque>
 #include <iterator>
 
-/* Inicio das funções */
 
+
+/* Inicio das funções */
+/* Função A */
+/* Dado o nome de um artista, exibir todos os CD's de sua autoria ordenados pela data de lançamento */
+void showAllCds (){
+    
+}
 #endif

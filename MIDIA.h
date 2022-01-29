@@ -50,15 +50,6 @@ public:
    bool getFormato();
 };
 
-// MIDIA::MIDIA()
-// {
-//    artista = nullptr;
-//    titulo = nullptr;
-//    lancamento = NULL;
-//    genero = nullptr;
-//    cdDvd = NULL;
-// }
-
 // Construtor padrão
 MIDIA::MIDIA(string nomeArtista, string nomeTitulo, int lanc, string gen, deque<string> kw, bool CDDVD)
 {

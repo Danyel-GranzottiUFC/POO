@@ -10,19 +10,12 @@
 #include <deque>
 #include <iterator>
 
-<<<<<<< HEAD
-=======
-/*
-*/
-
->>>>>>> fdb2da0a07ac5d9f5f6e3e2e89ca436d5f6a44f6
 /* Inicio das funções */
 
 /* Função A */
 /* Dado o nome de um artista, exibir todos os CD's de sua autoria ordenados pela data de lançamento */
 void showAllCds(string artista, deque<MIDIA> &colecao)
 {
-
     std::deque<MIDIA>::iterator w;
     for (w = colecao.begin(); w != colecao.end(); w++)
     {
@@ -52,7 +45,10 @@ void showAll(string artista, deque<MIDIA> &colecao)
     std::deque<MIDIA>::iterator w;
     for (w = colecao.begin(); w != colecao.end(); w++)
     {
-        cout << "midia----->" << w->getTitulo() << endl;
+        if ((w->getArtista() == artista))
+        {
+            cout << "midia----->" << w->getTitulo() << endl;
+        }
     }
 };
 
@@ -62,7 +58,7 @@ void showAllInYear(int lancamento, deque<MIDIA> &colecao)
     std::deque<MIDIA>::iterator w;
     for (w = colecao.begin(); w != colecao.end(); w++)
     {
-        if ((w->getLancamento() == lancamento) && (!w->getFormato()))
+        if ((w->getLancamento() == lancamento))
         {
             cout << "midia----->" << w->getTitulo() << endl;
         }
@@ -80,6 +76,7 @@ void showAllByGen(string gen, deque<MIDIA> &colecao)
             cout << "dvd----->" << w->getTitulo() << endl;
         }
     }
+
     cout << "CDs" << endl;
     for (w = colecao.begin(); w != colecao.end(); w++)
     {
@@ -101,7 +98,7 @@ void showAllKw(deque<MIDIA> &colecao)
 
         for (temp = kw.begin(); temp != kw.end(); temp++)
         {
-            cout << "dvd----->" << *temp << endl;
+            cout << "kw----->" << *temp << endl;
         }
     }
 }

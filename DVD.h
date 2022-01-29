@@ -13,11 +13,13 @@
 
 using namespace std;
 
-class DVD{
+class DVD
+{
 private:
    deque<string *> formatoAudio;
    deque<string *> formatoTela;
    deque<string *> legendas;
+
 public:
    deque<string *> getFormatoAudio();
    void setFormatoAudio(deque<string *>);
@@ -28,23 +30,30 @@ public:
    deque<string *> getLegendas();
    void setColetanea(deque<string *>);
 };
-  deque<string *> DVD::getFormatoAudio(){
-   return(this->formatoAudio);
+
+deque<string *> DVD::getFormatoAudio()
+{
+   return (this->formatoAudio);
 };
-void DVD::setFormatoAudio(deque<string *> name){
+void DVD::setFormatoAudio(deque<string *> name)
+{
    this->formatoAudio = name;
 };
-  deque<string *> DVD::getFormatoTela(){
+deque<string *> DVD::getFormatoTela()
+{
    return (this->formatoTela);
 };
-void DVD::setFormatoTela(deque<string *> name){
+void DVD::setFormatoTela(deque<string *> name)
+{
    this->formatoTela = name;
 };
-  deque<string *> DVD::getLegendas(){
-   return(this->legendas);
+deque<string *> DVD::getLegendas()
+{
+   return (this->legendas);
 };
-void DVD::setColetanea(deque<string *> name){
-   this->legendas=name;
+void DVD::setColetanea(deque<string *> name)
+{
+   this->legendas = name;
 };
 
 #endif

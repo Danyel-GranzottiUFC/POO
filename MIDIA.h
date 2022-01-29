@@ -44,9 +44,6 @@ public:
 
    deque<string *> getKeywords();
    void setKeywords(deque<string *>);
-
-   void printCDs(string name);
-   void printAllMedia(int year);
 };
 
 // Construtor padrão

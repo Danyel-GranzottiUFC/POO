@@ -21,10 +21,12 @@ private:
    deque<string *> faixas;
    int lancamento;
    string genero;
-   deque<string *> keywords;
+   deque<string> keywords;
+   bool cdDvd;
 
 public:
-   MIDIA(string, string, int, string);
+   // MIDIA();
+   MIDIA(string, string, int, string, deque<string>, bool);
    ~MIDIA();
 
    string getArtista();
@@ -42,17 +44,33 @@ public:
    string getGenero();
    void setGenero(string);
 
-   deque<string *> getKeywords();
-   void setKeywords(deque<string *>);
+   deque<string> getKeywords();
+   void setKeywords(deque<string>);
+
+   bool getFormato();
 };
 
+// MIDIA::MIDIA()
+// {
+//    artista = nullptr;
+//    titulo = nullptr;
+//    lancamento = NULL;
+//    genero = nullptr;
+//    cdDvd = NULL;
+// }
+
 // Construtor padrão
-MIDIA::MIDIA(string nomeArtista, string nomeTitulo, int lanc, string gen)
+MIDIA::MIDIA(string nomeArtista, string nomeTitulo, int lanc, string gen, deque<string> kw, bool CDDVD)
 {
    artista = nomeArtista;
    titulo = nomeTitulo;
    lancamento = lanc;
    genero = gen;
+   keywords = kw;
+   cdDvd = CDDVD;
+}
+MIDIA::~MIDIA()
+{
 }
 
 string MIDIA::getArtista()
@@ -100,13 +118,18 @@ void MIDIA::setGenero(string name)
    this->genero = name;
 };
 
-deque<string *> MIDIA::getKeywords()
+deque<string> MIDIA::getKeywords()
 {
    return (this->keywords);
 };
-void MIDIA::setKeywords(deque<string *> kw)
+void MIDIA::setKeywords(deque<string> kw)
 {
    this->keywords = kw;
 };
+
+bool MIDIA::getFormato()
+{
+   return (this->cdDvd);
+}
 
 #endif

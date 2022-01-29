@@ -10,6 +10,12 @@
 #include <deque>
 #include <iterator>
 
+<<<<<<< HEAD
+=======
+/*
+*/
+
+>>>>>>> fdb2da0a07ac5d9f5f6e3e2e89ca436d5f6a44f6
 /* Inicio das funções */
 
 /* Função A */

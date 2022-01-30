@@ -21,11 +21,12 @@ void showAllCds(string artista, deque<MIDIA> &colecao)
     {
         if ((w->getArtista() == artista) && (w->getFormato()))
         {
-            cout << "cd----->" << w->getTitulo() << endl;
+            cout << "CD's - " << w->getTitulo() << endl;
         }
     }
 };
-
+/* Função B */
+/* Dado o nome de um artista, exibir todos os DVD's de sua autoria ordenados pela data de lançamento */
 void showAllDvds(string artista, deque<MIDIA> &colecao)
 {
 
@@ -34,24 +35,25 @@ void showAllDvds(string artista, deque<MIDIA> &colecao)
     {
         if ((w->getArtista() == artista) && (!w->getFormato()))
         {
-            cout << "dvd----->" << w->getTitulo() << endl;
+            cout << "DVD's - " << w->getTitulo() << endl;
         }
     }
 };
-
+/* Função C */
+/* Dado o nome do artista, exibir todas as midias de sua autoria, ordenados pela data de lançamento */
 void showAll(string artista, deque<MIDIA> &colecao)
 {
-
     std::deque<MIDIA>::iterator w;
     for (w = colecao.begin(); w != colecao.end(); w++)
     {
         if ((w->getArtista() == artista))
         {
-            cout << "midia----->" << w->getTitulo() << endl;
+            cout << "Midia - " << w->getTitulo() << endl;
         }
     }
 };
-
+/*  Função D */
+/* Dado um ano, exibir todas as midias lanaçadas naquele ano, independente do artista, ordenados alfabetiacmente */
 void showAllInYear(int lancamento, deque<MIDIA> &colecao)
 {
 
@@ -60,37 +62,41 @@ void showAllInYear(int lancamento, deque<MIDIA> &colecao)
     {
         if ((w->getLancamento() == lancamento))
         {
-            cout << "midia----->" << w->getTitulo() << endl;
+            cout << "Midia -" << w->getTitulo() << endl;
         }
     }
 };
-
+/* Função E */
+/* Dado um ano, exibir todas as mídias lançadas naquele ano, independente do artista, ordenado alfabeticamente */
 void showAllByGen(string gen, deque<MIDIA> &colecao)
 {
     std::deque<MIDIA>::iterator w;
-    cout << "DVDs" << endl;
+    cout << "   DVD's" << endl;
+    cout << "==========" << endl;
     for (w = colecao.begin(); w != colecao.end(); w++)
     {
         if ((w->getGenero() == gen) && (!w->getFormato()))
         {
-            cout << "dvd----->" << w->getTitulo() << endl;
+            cout << "DVD - " << w->getTitulo() << endl;
         }
     }
-
-    cout << "CDs" << endl;
+cout << "==========" << endl;
+    cout << "   CD's" << endl;
+    cout << "==========" << endl;
     for (w = colecao.begin(); w != colecao.end(); w++)
     {
         if ((w->getGenero() == gen) && (w->getFormato()))
         {
-            cout << "cd----->" << w->getTitulo() << endl;
+            cout << "CD - " << w->getTitulo() << endl;
         }
     }
 }
-
+/* Função G */
+/* Mostra todas as key words sem */
 void showAllKw(deque<MIDIA> &colecao)
 {
     std::deque<MIDIA>::iterator w;
-    cout << "DVDs" << endl;
+    cout << "Palavras Chave\n" << endl;
     for (w = colecao.begin(); w != colecao.end(); w++)
     {
         std::deque<string>::iterator temp;
@@ -98,8 +104,9 @@ void showAllKw(deque<MIDIA> &colecao)
 
         for (temp = kw.begin(); temp != kw.end(); temp++)
         {
-            cout << "kw----->" << *temp << endl;
+            cout << "Palavra Chave - " << *temp << endl;
         }
+        cout << " " << endl;
     }
 }
 #endif

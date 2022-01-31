@@ -25,10 +25,11 @@ private:
    bool cdDvd;
 
 public:
-   // MIDIA();
+   
    MIDIA(string, string, int, string, deque<string>, bool);
    ~MIDIA();
-
+   
+   /* Gatters e Setters */
    string getArtista();
    void setArtista(string);
 
@@ -63,7 +64,7 @@ MIDIA::MIDIA(string nomeArtista, string nomeTitulo, int lanc, string gen, deque<
 MIDIA::~MIDIA()
 {
 }
-
+/* Encapsulamento */
 string MIDIA::getArtista()
 {
    return (this->artista);

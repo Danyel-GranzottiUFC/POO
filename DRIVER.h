@@ -1,5 +1,6 @@
 #ifndef DRIVER_H
 #define DRIVER_H
+
 /* Headers */
 #include "MIDIA.h"
 #include "DVD.h"
@@ -25,6 +26,7 @@ void showAllCds(string artista, deque<MIDIA> &colecao)
         }
     }
 };
+
 /* Função B */
 /* Dado o nome de um artista, exibir todos os DVD's de sua autoria ordenados pela data de lançamento */
 void showAllDvds(string artista, deque<MIDIA> &colecao)
@@ -39,6 +41,7 @@ void showAllDvds(string artista, deque<MIDIA> &colecao)
         }
     }
 };
+
 /* Função C */
 /* Dado o nome do artista, exibir todas as midias de sua autoria, ordenados pela data de lançamento */
 void showAll(string artista, deque<MIDIA> &colecao)
@@ -52,6 +55,7 @@ void showAll(string artista, deque<MIDIA> &colecao)
         }
     }
 };
+
 /*  Função D */
 /* Dado um ano, exibir todas as midias lanaçadas naquele ano, independente do artista, ordenados alfabetiacmente */
 void showAllInYear(int lancamento, deque<MIDIA> &colecao)
@@ -66,6 +70,7 @@ void showAllInYear(int lancamento, deque<MIDIA> &colecao)
         }
     }
 };
+
 /* Função E */
 /* Dado um ano, exibir todas as mídias lançadas naquele ano, independente do artista, ordenado alfabeticamente */
 void showAllByGen(string gen, deque<MIDIA> &colecao)
@@ -91,6 +96,7 @@ cout << "==========" << endl;
         }
     }
 }
+
 /* Função G */
 /* Mostra todas as key words sem */
 void showAllKw(deque<MIDIA> &colecao)

@@ -52,12 +52,6 @@ public:
 // Construtor padrão
 MIDIA::MIDIA(string nomeArtista, string nomeTitulo, deque<string> fx, int lanc, string gen, deque<string> kw)
 {
-   CD::CD(int dr, float vl, bool clt)
-   {
-      duracao = dr;
-      volume = vl;
-      coletanea = clt;
-   }
    artista = nomeArtista;
    titulo = nomeTitulo;
    faixas = fx;

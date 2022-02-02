@@ -3,10 +3,7 @@
 #include <iostream>
 
 #include "DRIVER.h"
-/*
-    True - CD
-    False - DVD
-*/
+
 int main()
 {
     // Lista de midias

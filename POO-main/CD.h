@@ -33,6 +33,12 @@ public:
    bool getColetanea();
    void setColetanea(bool);
 };
+CD::CD(int dr, float vl, bool clt)
+{
+   duracao = dr;
+   volume = vl;
+   coletanea = clt;
+}
 
 CD::~CD() {}
 

@@ -13,7 +13,7 @@
 
 using namespace std;
 
-class MIDIA : public CD, public DVD
+class MIDIA
 {
 private:
    string artista;
@@ -45,8 +45,6 @@ public:
 
    deque<string> getKeywords();
    void setKeywords(deque<string>);
-
-   bool getFormato();
 };
 
 // Construtor padrão

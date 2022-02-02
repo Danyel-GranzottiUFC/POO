@@ -2,8 +2,8 @@
 #define CD_H
 
 /* Headers */
-#include "MIDIA.h"
-#include "DVD.h"
+//#include "MIDIA.h"
+//#include "DVD.h"
 
 /* Bibliotecas */
 #include <iostream>
@@ -21,7 +21,7 @@ private:
    bool coletanea;
 
 public:
-   CD(int, float, bool);
+   CD(int, float, bool, string, string, deque<string>, int, string, deque<string>);
    ~CD();
 
    int getDuracao();
@@ -33,7 +33,8 @@ public:
    bool getColetanea();
    void setColetanea(bool);
 };
-CD::CD(int dr, float vl, bool clt)
+
+CD::CD(int dr, float vl, bool clt, string artista, string titulo, deque<string> faixas, int lancamento, string genero, deque<string> keywords) : MIDIA(artista, titulo, faixas, lancamento, genero, keywords)
 {
    duracao = dr;
    volume = vl;

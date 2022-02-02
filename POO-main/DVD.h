@@ -2,8 +2,8 @@
 #define DVD_H
 
 /* Headers */
-#include "CD.h"
-#include "MIDIA.h"
+//#include "CD.h"
+//#include "MIDIA.h"
 
 /* Bibliotecas C++ */
 #include <iostream>

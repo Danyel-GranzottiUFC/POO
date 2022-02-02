@@ -1,4 +1,4 @@
-#include <algorithm>cout << teste.cout << teste.cout << teste.
+#include <algorithm>
 #include <deque>
 #include <iostream>
 
@@ -8,7 +8,7 @@ int main()
 {
     // Lista de midias
     deque<MIDIA> colecao;
-    CD *teste = new CD(2, 7.1, false);
+    // CD *teste = new CD(2, 7.1, false);
 
     /* Rock */
     /* Pink Floyd */

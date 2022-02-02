@@ -171,5 +171,5 @@ int main()
     // showAllKw(colecao);
     // /* -- */
 
-    // return 0;
+    return 0;
 }

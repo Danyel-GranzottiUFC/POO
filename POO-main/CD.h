@@ -1,11 +1,8 @@
 #ifndef CD_H
 #define CD_H
 
-/* Headers */
 #include "MIDIA.h"
-//#include "DVD.h"
 
-/* Bibliotecas */
 #include <iostream>
 #include <string>
 #include <deque>
@@ -22,7 +19,6 @@ private:
 
 public:
    CD(int, float, bool, string, string, deque<string>, int, string, deque<string>);
-   ~CD();
 
    int getDuracao();
    void setDuracao(int);

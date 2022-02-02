@@ -2,8 +2,6 @@
 #define MIDIA_H
 
 /* Headers */
-#include "CD.h"
-#include "DVD.h"
 
 /* Bibliotecas */
 #include <iostream>
@@ -25,7 +23,6 @@ private:
 
 public:
    MIDIA(string, string, deque<string>, int, string, deque<string>);
-   ~MIDIA();
 
    /* Gatters e Setters */
    string getArtista();

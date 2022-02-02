@@ -7,7 +7,10 @@
 int main()
 {
     // Lista de midias
-    deque<MIDIA> colecao;
+    deque<CD> colecaoCD;
+
+    CD *teste = new CD(1, 1.2, true, "artistateste", "The Dark Side Of The Moon", deque<string>{"teste", "teste"}, 1973, "Rock", deque<string>{"Rock", "Classic", "Anos 70"});
+
     // CD *teste = new CD(2, 7.1, false);
 
     /* Rock */

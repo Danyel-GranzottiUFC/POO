@@ -21,8 +21,7 @@ private:
    deque<string> legendas;
 
 public:
-   DVD(deque<string>, deque<string>, deque<string>);
-   ~DVD();
+   DVD(deque<string>, deque<string>, deque<string>, string, string, deque<string>, int, string, deque<string>);
 
    deque<string> getFormatoAudio();
    void setFormatoAudio(deque<string>);

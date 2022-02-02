@@ -10,9 +10,6 @@ MIDIA::MIDIA(string nomeArtista, string nomeTitulo, deque<string> fx, int lanc, 
     genero = gen;
     keywords = kw;
 }
-MIDIA::~MIDIA()
-{
-}
 
 /* Encapsulamento */
 string MIDIA::getArtista()

@@ -15,17 +15,17 @@
 
 /* Função A */
 /* Dado o nome de um artista, exibir todos os CD's de sua autoria ordenados pela data de lançamento */
-void showAllCds(string artista, deque<MIDIA> &colecao)
-{
-    std::deque<MIDIA>::iterator w;
-    for (w = colecao.begin(); w != colecao.end(); w++)
-    {
-        if ((w->getArtista() == artista))
-        {
-            cout << "CD's - " << w->getTitulo() << endl;
-        }
-    }
-};
+// void showAllCds(string artista, deque<MIDIA> &colecao)
+// {
+//     std::deque<MIDIA>::iterator w;
+//     for (w = colecao.begin(); w != colecao.end(); w++)
+//     {
+//         if ((w->getArtista() == artista))
+//         {
+//             cout << "CD's - " << w->getTitulo() << endl;
+//         }
+//     }
+// };
 
 /* Função B */
 /* Dado o nome de um artista, exibir todos os DVD's de sua autoria ordenados pela data de lançamento */

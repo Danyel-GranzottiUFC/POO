@@ -1,12 +1,11 @@
 #include "DVD.h"
 
-DVD::DVD(deque<string> formA, deque<string> formTl, deque<string> leg)
+DVD::DVD(deque<string> formA, deque<string> formTl, deque<string> leg, string artista, string titulo, deque<string> faixas, int lancamento, string genero, deque<string> keywords) : MIDIA(artista, titulo, faixas, lancamento, genero, keywords)
 {
     formatoAudio = formA;
     formatoTela = formTl;
     legendas = leg;
 }
-DVD::~DVD() {}
 
 deque<string> DVD::getFormatoAudio()
 {

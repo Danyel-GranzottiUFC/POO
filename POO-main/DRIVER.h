@@ -20,7 +20,7 @@ void showAllCds(string artista, deque<MIDIA> &colecao)
     std::deque<MIDIA>::iterator w;
     for (w = colecao.begin(); w != colecao.end(); w++)
     {
-        if ((w->getArtista() == artista) && (w->getFormato()))
+        if ((w->getArtista() == artista))
         {
             cout << "CD's - " << w->getTitulo() << endl;
         }

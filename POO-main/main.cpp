@@ -9,7 +9,49 @@ int main()
     // Lista de midias
     deque<CD> colecaoCD;
 
-    CD *teste = new CD(1, 1.2, true, "artistateste", "The Dark Side Of The Moon", deque<string>{"teste", "teste"}, 1973, "Rock", deque<string>{"Rock", "Classic", "Anos 70"});
+    colecaoCD.push_front(*(new CD(1, 1.2, true, "artistateste", "The Dark Side Of The Moon", deque<string>{"teste", "teste"}, 1973, "Rock", deque<string>{"Rock", "Classic", "Anos 70"})));
+
+    colecaoCD.push_front(*(new CD(1, 1.2, true, "artistateste", "The Dark Moon", deque<string>{"teste", "teste"}, 1972, "Rock", deque<string>{"Rock", "Classic", "Anos 70"})));
+
+    colecaoCD.push_front(*(new CD(1, 1.2, true, "artistateste", "The Moon", deque<string>{"teste", "teste"}, 1999, "Rock", deque<string>{"Rock", "Classic", "Anos 70"})));
+
+    colecaoCD.push_front(*(new CD(1, 1.2, true, "artistateste", "Moon", deque<string>{"testefaixa01", "teste"}, 1960, "Rock", deque<string>{"Rock", "Classic", "Anos 70"})));
+
+    colecaoCD.push_front(*(new CD(1, 1.2, true, "artistateste", "The ", deque<string>{"teste", "teste"}, 2021, "Rock", deque<string>{"Rock", "Classic", "Anos 70"})));
+
+    cout << colecaoCD[0].getArtista() << endl;
+    showAllCds("artistateste", colecaoCD);
+
+    cout << "------------------------" << endl;
+    deque<DVD> colecaoDVD;
+
+    colecaoDVD.push_front(*(new DVD(deque<string>{"teste"}, deque<string>{"teste"}, deque<string>{"teste"}, "artistateste", "The Dark Side Of The Moon - DVD", deque<string>{"teste", "teste"}, 1973, "Rock", deque<string>{"Rock", "Classic", "Anos 70"})));
+
+    colecaoDVD.push_front(*(new DVD(deque<string>{"teste"}, deque<string>{"teste"}, deque<string>{"teste"}, "artistateste", "The Dark Moon - DVD", deque<string>{"teste", "teste"}, 1972, "Rock", deque<string>{"Rock", "Classic", "Anos 70"})));
+
+    colecaoDVD.push_front(*(new DVD(deque<string>{"teste"}, deque<string>{"teste"}, deque<string>{"teste"}, "artistateste", "The Moon - DVD", deque<string>{"teste", "teste"}, 1999, "Rock", deque<string>{"Rock", "Classic", "Anos 70"})));
+
+    colecaoDVD.push_front(*(new DVD(deque<string>{"teste"}, deque<string>{"teste"}, deque<string>{"teste"}, "artistateste", "Moon - DVD", deque<string>{"teste", "teste"}, 1960, "Rock", deque<string>{"Funk", "Class00ic", "Anos 700"})));
+
+    colecaoDVD.push_front(*(new DVD(deque<string>{"teste"}, deque<string>{"teste"}, deque<string>{"teste"}, "artistateste", "The - DVD", deque<string>{"testefaixa01", "teste02"}, 2021, "Rock", deque<string>{"Rock", "Classic", "Anos 90"})));
+
+    showAllDvds("artistateste", colecaoDVD);
+
+    cout << "------------------------" << endl;
+
+    showAllMidia("artistateste", colecaoCD, colecaoDVD);
+
+    cout << "------------------------" << endl;
+    showAllInYear(2021, colecaoCD, colecaoDVD);
+    showAllInYear(1973, colecaoCD, colecaoDVD);
+
+    cout << "------------------------" << endl;
+    // showEquals("Moon", "Moon", colecaoCD, colecaoDVD);
+
+    showAllByGen("Rock", colecaoCD, colecaoDVD);
+
+    cout << "------------------------" << endl;
+    showAllKw(colecaoCD, colecaoDVD);
 
     // CD *teste = new CD(2, 7.1, false);
 

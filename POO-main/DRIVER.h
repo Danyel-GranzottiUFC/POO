@@ -9,6 +9,7 @@
 /* Bibliotecas C++ */
 #include <iostream>
 #include <deque>
+#include <vector>
 #include <iterator>
 #include <algorithm>
 
@@ -130,61 +131,79 @@ void showAllInYear(int lancamento, deque<CD> &colecaoCD, deque<DVD> &colecaoDVD)
 
 /* Função E */
 /* Dados um titulo de CD e um título de DVD de um mesmo artista, exibir quais faixas ambos possuem em comum e quais faixas só existem no CD e no DVD; */
-// void showEquals(string tituloCD, string tituloDVD, deque<CD> &colecaoCD, deque<DVD> &colecaoDVD)
-// {
-//     DVD tempDvd = colecaoDVD[0];
-//     std::deque<DVD>::iterator w;
-//     for (w = colecaoDVD.begin(); w != colecaoDVD.end(); w++)
-//     {
-//         if ((w->getTitulo() == tituloDVD))
-//         {
-//             tempDvd = *w;
-//         }
-//     }
+void showEquals(string tituloCD, string tituloDVD, deque<CD> &colecaoCD, deque<DVD> &colecaoDVD)
+{
+    DVD tempDvd = colecaoDVD[0];
+    std::deque<DVD>::iterator w;
+    for (w = colecaoDVD.begin(); w != colecaoDVD.end(); w++)
+    {
+        if ((w->getTitulo() == tituloDVD))
+        {
+            tempDvd = *w;
+        }
+    }
 
-//     CD tempCd = colecaoCD[0];
-//     std::deque<CD>::iterator j;
-//     for (j = colecaoCD.begin(); j != colecaoCD.end(); j++)
-//     {
-//         if ((j->getTitulo() == tituloCD))
-//         {
-//             tempCd = *j;
-//         }
-//     }
-//     // CD e DVD do artista
+    CD tempCd = colecaoCD[0];
+    std::deque<CD>::iterator j;
+    for (j = colecaoCD.begin(); j != colecaoCD.end(); j++)
+    {
+        if ((j->getTitulo() == tituloCD))
+        {
+            tempCd = *j;
+        }
+    }
+    vector<string> justCD, justDVD;
+    std::deque<string> auxCd;
+    auxCd = tempCd.getFaixa();
 
-//     std::deque<string> both, onlyCd, onlyDvd;
+    std::deque<string> auxDvd;
+    auxDvd = tempDvd.getFaixa();
 
-//     cout << "aqui" << endl;
+    cout << "================" << endl;
+    cout << "Faixas em comum" << endl;
+    cout << "================" << endl;
 
-//     std::deque<string> c;
-//     c = w->getFaixa();
+    std::deque<string>::iterator aux;
 
-//     std::deque<string> d;
-//     d = j->getFaixa();
+    for (aux = auxCd.begin(); aux != auxCd.end(); aux++)
+    {
+        if (std::find(auxDvd.begin(), auxDvd.end(), *aux) != auxDvd.end())
+        {
+            cout << *aux << endl;
+        }
+        else
+        {
+            justCD.push_back(*aux);
+        }
+    }
+    for (aux = auxDvd.begin(); aux != auxDvd.end(); aux++)
+    {
+        if (std::find(auxCd.begin(), auxCd.end(), *aux) == auxCd.end())
+        {
+            justDVD.push_back(*aux);
+        }
+    }
 
-//     cout << "passou" << endl;
-//     std::deque<string>::iterator AUXCD;
-//     std::deque<string>::iterator AUXDVD;
+    cout << "================" << endl;
+    cout << "Faixas apenas no CD" << endl;
+    cout << "================" << endl;
 
-//     for (AUXCD = c.begin(); AUXCD != c.end(); AUXCD++)
-//     {
-//         for (AUXDVD = d.begin(); AUXDVD != d.end(); AUXDVD++)
-//         {
-//             if (AUXCD == AUXDVD)
-//             {
-//                 both.push_back(*AUXDVD);
-//             }
-//         }
-//     }
+    for (unsigned int i = 0; i < justCD.size(); i++)
+    {
+        cout << justCD.at(i) << endl;
+    }
 
-//     std::deque<string>::iterator auxPrint;
-//     for (auxPrint = both.begin(); auxPrint != both.end(); auxPrint++)
-//     {
-//         cout << *auxPrint << endl;
-//     }
-// }
+    cout << "================" << endl;
+    cout << "Faixas apenas no DVD" << endl;
+    cout << "================" << endl;
 
+    for (unsigned int i = 0; i < justDVD.size(); i++)
+    {
+        cout << justDVD.at(i) << endl;
+    }
+
+    cout << "aqui" << endl;
+}
 /*Função F*/
 
 // deque<MIDIA> colecao;
